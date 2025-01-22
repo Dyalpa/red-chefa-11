@@ -1,0 +1,85 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Registro de Medicamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Registro de Medicamentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="center-title">Formulario de Medicamentos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarMedicamento()" #medicamentoForm="ngForm">
+        <ion-item class="item-hover">
+          <ion-label position="floating">Nombre del medicamento</ion-label>
+          <ion-input [(ngModel)]="nombre" name="nombre" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Especialidad que lo receta</ion-label>
+          <ion-input [(ngModel)]="especialidad" name="especialidad" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Presentación</ion-label>
+          <ion-input [(ngModel)]="presentacion" name="presentacion" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Cantidad</ion-label>
+          <ion-input [(ngModel)]="cantidad" name="cantidad" type="number" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Dosis</ion-label>
+          <ion-input [(ngModel)]="dosis" name="dosis" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Frecuencia</ion-label>
+          <ion-input [(ngModel)]="frecuencia" name="frecuencia" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Fecha de entrega</ion-label>
+          <ion-input [(ngModel)]="fechaEntrega" name="fechaEntrega" type="date" required class="input-margin translucent-input"></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" class="submit-button">Registrar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

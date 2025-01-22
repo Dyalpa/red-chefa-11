@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Registro de Citas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Registro de Citas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="center-title">Registrar Cita</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarCita()" #citaForm="ngForm">
+        <ion-item class="item-hover">
+          <ion-label position="floating">Especialista</ion-label>
+          <ion-input [(ngModel)]="especialista" name="especialista" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Fecha</ion-label>
+          <ion-input [(ngModel)]="fecha" name="fecha" type="date" required class="input-margin translucent-input"></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Hora</ion-label>
+          <ion-input [(ngModel)]="hora" name="hora" type="time" required class="input-margin translucent-input"></ion-input>
+        </ion-item>        
+        <ion-item class="item-hover">
+          <ion-label position="floating">Observación</ion-label>
+          <ion-input [(ngModel)]="observacion" name="observacion" type="text" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" class="submit-button">Registrar Cita</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

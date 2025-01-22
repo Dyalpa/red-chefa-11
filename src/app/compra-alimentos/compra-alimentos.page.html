@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Registro de Alimentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Registro de Alimentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="center-title">Registrar Compra</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarAlimento()" #alimentoForm="ngForm">
+        <ion-item class="item-hover">
+          <ion-label position="floating">Nombre del artículo</ion-label>
+          <ion-input [(ngModel)]="articulo" name="articulo" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Presentación</ion-label>
+          <ion-input [(ngModel)]="presentacion" name="presentacion" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Cantidad</ion-label>
+          <ion-input [(ngModel)]="cantidad" name="cantidad" type="number" required></ion-input>
+        </ion-item>        
+        <ion-item class="item-hover">
+          <ion-label position="floating">Fecha de compra</ion-label>
+          <ion-input [(ngModel)]="fechaCompra" name="fechaCompra" type="date" required class="input-margin translucent-input"></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" class="submit-button">Registrar Compra</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

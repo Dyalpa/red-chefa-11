@@ -1,0 +1,65 @@
+/* Estilo para el fondo de la página */
+.background {
+  --ion-background-color: #f0f8ff; /* Azul claro */
+  font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+  padding: 16px; /* Espaciado alrededor del contenido */
+}
+
+/* Estilo para la barra de inicio */
+.header {
+  --background: #4dd0e1; /* Azul claro */
+  --ion-toolbar-background: #4dd0e1; /* Azul claro */
+  --ion-text-color: #00110f; /* Texto verde oscuro */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para barra de inicio */
+}
+
+/* Estilo para las tarjetas */
+.card {
+  background-color: #ffffff; /* Blanco para contraste */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de tarjeta */
+  margin-bottom: 16px; /* Espacio entre tarjetas */
+}
+
+/* Estilo para los elementos del formulario */
+.item-hover {
+  background-color: #ffffff; /* Blanco para contraste */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de elementos */
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 12px; /* Espacio entre elementos */
+}
+
+.item-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Mayor sombra al pasar el ratón */
+}
+
+/* Estilo para el título centrado */
+.center-title {
+  text-align: center; /* Centrar texto */
+}
+
+/* Estilo para el botón */
+.submit-button {
+  --background: #4dd0e1; /* Azul claro */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de tarjeta */
+  color: #000000; /* Texto negro */
+  font-weight: bold; /* Texto en negrita */
+  margin-top: 20px; /* Margen superior */
+  width: 100%;
+}
+
+/* Estilo para el input de fecha */
+.input-margin {
+  margin-top: 10px; /* Separación debajo de la etiqueta */
+}
+
+.translucent-input {
+  color: rgba(0, 0, 0, 0.6); /* Color traslúcido */
+}
+
+  

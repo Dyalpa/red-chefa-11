@@ -1,0 +1,28 @@
+<ion-content class="background">
+  <ion-header class="header">
+    <ion-toolbar>
+      <ion-title>Iniciar Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <div class="center-title">
+        <ion-label>
+          <h2>Bienvenido</h2>
+        </ion-label>
+      </div>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input [(ngModel)]="correo" type="email"></ion-input>
+      </ion-item>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="clave" type="password"></ion-input>
+      </ion-item>
+      <div class="center-title">
+        <ion-button class="submit-button" (click)="login()">Iniciar Sesión</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

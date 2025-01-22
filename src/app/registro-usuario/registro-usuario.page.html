@@ -1,0 +1,40 @@
+<ion-content class="background">
+  <ion-header class="header">
+    <ion-toolbar>
+      <ion-title>Registro de Usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <div class="center-title">
+        <ion-label>
+          <h2>Crear Cuenta</h2>
+        </ion-label>
+      </div>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input [(ngModel)]="correo" type="email"></ion-input>
+      </ion-item>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="clave" type="password"></ion-input>
+      </ion-item>
+      <ion-item class="item-hover">
+        <ion-label position="floating">Tipo de Usuario</ion-label>
+        <ion-select [(ngModel)]="tipo_usuario">
+          <ion-select-option value="admin">Cuidador</ion-select-option>
+          <ion-select-option value="user">Supervisor</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="center-title">
+        <ion-button class="submit-button" (click)="register()">Registrarse</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

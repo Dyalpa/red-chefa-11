@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>
+      Alimentos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Alimentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('compra-alimentos')">
+          <ion-card-header>
+            <ion-card-title>Registro de compra de alimentos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Registra tus alimentos aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('consulta-alimentos-disponibles')">
+          <ion-card-header>
+            <ion-card-title>Consulta de Alimentos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Consulta la disponibilidad de alimentos aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

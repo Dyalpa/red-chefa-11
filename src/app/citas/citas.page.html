@@ -1,0 +1,40 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>
+      Gestión de Citas Médicas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Gestión de Citas Médicas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('registrar-cita')">
+          <ion-card-header>
+            <ion-card-title>Registro de citas médicas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Registra tus citas médicas aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('consultar-cita')">
+          <ion-card-header>
+            <ion-card-title>Consulta de citas médicas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Consulta tus citas médicas aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,75 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('medicamentos')">
+          <ion-card-header>
+            <ion-card-title>Medicamentos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Gestiona tus medicamentos aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('alimentos')">
+          <ion-card-header>
+            <ion-card-title>Alimentos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Gestiona tu alimentación aquí</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('citas')">
+          <ion-card-header>
+            <ion-card-title>Citas Médicas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Consulta y agenda citas médicas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('novedades')">
+          <ion-card-header>
+            <ion-card-title>Novedades</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Mira las últimas novedades</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card" (click)="navigateTo('historial')">
+          <ion-card-header>
+            <ion-card-title>Historial</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Revisa tu historial médico</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

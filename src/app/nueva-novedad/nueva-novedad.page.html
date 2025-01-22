@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Registro de novedades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Registro de novedades</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="center-title">Nueva Novedad</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarNovedad()" #novedadForm="ngForm">
+        <ion-item class="item-hover">
+          <ion-label position="floating">Fecha</ion-label>
+          <ion-input [(ngModel)]="fecha" name="fecha" type="date" required class="input-margin translucent-input"></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Hora</ion-label>
+          <ion-input [(ngModel)]="hora" name="hora" type="time" required class="input-margin translucent-input"></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Tipo de novedad</ion-label>          
+          <ion-input [(ngModel)]="tipoNovedad" name="tipoNovedad" type="text" required></ion-input>
+        </ion-item>               
+        <ion-item class="item-hover">
+          <ion-label position="floating">Prioridad</ion-label>
+          <ion-input [(ngModel)]="prioridad" name="prioridad" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Descripción</ion-label>
+          <ion-input [(ngModel)]="descripcion" name="descripcion" type="text" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" class="submit-button">Registrar Novedad</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
