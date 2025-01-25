@@ -17,11 +17,12 @@
         <ion-input [(ngModel)]="correo" type="email"></ion-input>
       </ion-item>
       <ion-item class="item-hover">
-        <ion-label position="floating">Contraseña</ion-label>
+        <ion-label position="floating">Clave</ion-label>
         <ion-input [(ngModel)]="clave" type="password"></ion-input>
       </ion-item>
       <div class="center-title">
         <ion-button class="submit-button" (click)="login()">Iniciar Sesión</ion-button>
+        <ion-button class="submit-button" (click)="navigateTo('registro-usuario')">Registrarse</ion-button>
       </div>
     </ion-card-content>
   </ion-card>
