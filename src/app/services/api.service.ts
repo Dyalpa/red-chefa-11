@@ -33,6 +33,21 @@ export class ApiService {
      );
   }  
 
+    //Cierre de sesión
+    logout(): Observable<any> {
+      const url = `${this.baseUrl}/logout`;
+      const token = localStorage.getItem('token'); // O sessionStorage.getItem('token')
+
+      const headers = {
+              'Authorization': `Bearer ${token}`
+      };
+
+      return this.http.post(url, {}, { headers }).pipe(  
+      catchError(this.handleError)
+      );
+   }
+
+    
   addMedicamento(medicamento: any): Observable<any> {
     const url = `${this.baseUrl}/medicamentos`;
     return this.http.post(url, medicamento).pipe(
@@ -62,6 +77,14 @@ export class ApiService {
   }
 
   //METODOS DE CONSULTA
+
+  getUserInfo(userId: string): Observable<any> {
+    const url = `${this.baseUrl}/usuarios/${userId}`;
+    return this.http.get(url).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   
   //MÉTODOS DE ACTUALIZACIÓN
 

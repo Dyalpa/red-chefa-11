@@ -1,15 +1,23 @@
 <ion-header [translucent]="true" class="header">
   <ion-toolbar>
     <ion-title>
-      Inicio
-    </ion-title>
+      Bienvenido
+    </ion-title>    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
+  <div class="user-info">
+    <div class="user-details">
+      <span>Usuario:</span>
+      <span>{{username}}</span>
+    </div>
+    <span class="logout-link" (click)="logout()">Cerrar sesión</span>
+  </div>
+
   <ion-header collapse="condense" class="header">
     <ion-toolbar>
-      <ion-title size="large">Inicio</ion-title>
+      <ion-title size="large">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -72,4 +80,14 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+
+
+
+
+
+
+
+
+
+
 

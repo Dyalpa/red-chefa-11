@@ -13,7 +13,6 @@ import { AlertController } from '@ionic/angular'; // Importar AlertController co
   standalone: true, 
   imports: [CommonModule, FormsModule, IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem]
 })
-
 export class LoginPage {
   correo: string = '';
   clave: string = '';
@@ -31,13 +30,20 @@ export class LoginPage {
       return;
     }
 
-    this.authService.login(this.correo, this.clave).subscribe(
+    this.authService.login(this.correo.toLowerCase(), this.clave).subscribe(
       response => {
         console.log('Inicio de sesión exitoso', response);
         localStorage.setItem('token', response.token); // Almacenar el token
+        localStorage.setItem('userId', response.userId); // Almacenar el userId
+        // Limpiar los campos después de iniciar sesión
+        this.correo = '';
+        this.clave = '';
         this.router.navigate(['/home']); // Redirigir a la pantalla principal
       },
       async error => {
+        // Limpiar los campos después de un intento de inicio de sesión fallido
+        this.correo = '';
+        this.clave = '';
         const alert = await this.alertController.create({
           header: 'Error',
           message: 'Usuario o clave inválidos.',
@@ -52,7 +58,10 @@ export class LoginPage {
   navigateTo(page: string) {
     this.router.navigate([`/${page}`]);
   }
-
 }
+
+
+
+
 
 

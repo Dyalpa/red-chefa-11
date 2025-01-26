@@ -43,3 +43,30 @@
   padding: 16px; /* Espaciado interno */
   text-align: center; /* Centrar texto */
 }
+
+/* Estilos adicionales para la información del usuario */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa; /* Color de fondo opcional */
+  border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+  font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+  font-size: 16px; /* Tamaño de fuente */
+  margin-bottom: 16px; /* Espacio debajo de la sección */
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear a la izquierda */
+}
+
+.logout-link {
+  align-self: flex-end; /* Alinear "Cerrar Sesión" verticalmente con el nombre de usuario */
+  cursor: pointer;
+  color: #00110f; /* Coincidir con el color azul claro */
+  text-decoration: underline; /* Subrayado permanente */
+  
+}
