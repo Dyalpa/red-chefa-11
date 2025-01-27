@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem } from '@ionic/angular/standalone';
 import { ApiService } from '../services/api.service';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class RegistrarCitaPage implements OnInit {
   hora: string = '';
   observacion: string = '';
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -56,6 +57,10 @@ export class RegistrarCitaPage implements OnInit {
         alert('Error desconocido registrando la cita');
       }
     }
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([`/${page}`]);
   }
 }
 

@@ -7,6 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
+  <div class="nav-buttons">
+    <span class="nav-link" (click)="navigateTo('home')">
+      <img src="assets/icon/izquierda.png" class="icon" alt="Atrás">
+      Atrás
+    </span>
+    <span class="nav-link nav-right" (click)="navigateTo('home')">
+      <img src="assets/icon/hogar.png" class="icon" alt="Inicio">
+      Inicio
+    </span>
+  </div>
+
   <ion-header collapse="condense" class="header">
     <ion-toolbar>
       <ion-title size="large">Medicamentos</ion-title>
@@ -31,12 +42,16 @@
             <ion-card-title>Consulta de Medicamentos</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>Consulta tus medicamentos aquí</p>
-          </ion-card-content>
+            <p>Consulta tus medicamentos aquí</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+
+
+
+
+
 
 

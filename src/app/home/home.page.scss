@@ -44,6 +44,40 @@
   text-align: center; /* Centrar texto */
 }
 
+/* Estilos adicionales para los enlaces de navegación */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #d3e3f1; /* Color de fondo para la sección de navegación */
+  border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+  font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 10px; /* Añadir bordes redondeados */
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column; /* Apilar ícono encima del texto */
+  align-items: center; /* Centrar elementos verticalmente */
+  cursor: pointer;
+  color: #4dd0e1; /* Coincidir con el color azul claro */
+  text-decoration: underline; /* Subrayado permanente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar texto */
+}
+
+.nav-link .icon {
+  width: 24px; /* Ajustar tamaño según sea necesario */
+  height: 24px;
+  margin-bottom: 4px; /* Espacio entre el icono y el texto */
+}
+
+.nav-right {
+  align-self: center; /* Alinear verticalmente con el nombre de usuario */
+}
+
 /* Estilos adicionales para la información del usuario */
 .user-info {
   display: flex;
@@ -54,19 +88,34 @@
   border-bottom: 1px solid #ddd; /* Línea inferior opcional */
   font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
   font-size: 16px; /* Tamaño de fuente */
-  margin-bottom: 16px; /* Espacio debajo de la sección */
 }
 
 .user-details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinear a la izquierda */
+  align-items: center; /* Centrar ícono y datos del usuario */
+  color: #00110f; /* Coincidir con el texto verde oscuro */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.user-details .icon {
+  width: 24px; /* Tamaño más pequeño para el ícono de cerrar sesión */
+  height: 24px;
+  margin-bottom: 4px; /* Espacio entre el icono y el texto */
 }
 
 .logout-link {
-  align-self: flex-end; /* Alinear "Cerrar Sesión" verticalmente con el nombre de usuario */
   cursor: pointer;
-  color: #00110f; /* Coincidir con el color azul claro */
+  color: #4dd0e1; /* Coincidir con el color azul claro */
   text-decoration: underline; /* Subrayado permanente */
-  
+  font-weight: bold; /* Texto en negrita */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar ícono y texto */
+}
+
+.logout-link .icon {
+  width: 24px; /* Tamaño más pequeño para el ícono de cerrar sesión */
+  height: 24px;
+  margin-bottom: 4px; /* Espacio entre el icono y el texto */
 }

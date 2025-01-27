@@ -43,3 +43,36 @@
     padding: 16px; /* Espaciado interno */
     text-align: center; /* Centrar texto */
   }
+
+  /* Estilos adicionales para los enlaces de navegación */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa; /* Color de fondo opcional */
+  border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+  font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column; /* Apilar ícono encima del texto */
+  align-items: center; /* Centrar elementos verticalmente */
+  cursor: pointer;
+  color: #4dd0e1; /* Coincidir con el color azul claro */
+  text-decoration: underline; /* Subrayado permanente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar texto */
+}
+
+.nav-link .icon {
+  width: 24px; /* Ajustar tamaño según sea necesario */
+  height: 24px;
+  margin-bottom: 4px; /* Espacio entre el icono y el texto */
+}
+
+.nav-right {
+  align-self: center; /* Alinear verticalmente con el nombre de usuario */
+}

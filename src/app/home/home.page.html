@@ -2,17 +2,20 @@
   <ion-toolbar>
     <ion-title>
       Bienvenido
-    </ion-title>    
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
   <div class="user-info">
     <div class="user-details">
-      <span>Usuario:</span>
+      <img src="assets/icon/usuario.png" class="icon" alt="Usuario">
       <span>{{username}}</span>
     </div>
-    <span class="logout-link" (click)="logout()">Cerrar sesión</span>
+    <span class="logout-link" (click)="logout()">
+      <img src="assets/icon/cerrar-sesion.png" class="icon" alt="Cerrar Sesión">
+      Cerrar Sesión
+    </span>
   </div>
 
   <ion-header collapse="condense" class="header">
@@ -39,8 +42,7 @@
             <ion-card-title>Alimentos</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>Gestiona tu alimentación aquí</p>
-          </ion-card-content>
+            <p>Gestiona tu alimentación aquí</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -61,8 +63,7 @@
             <ion-card-title>Novedades</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>Mira las últimas novedades</p>
-          </ion-card-content>
+            <p>Mira las últimas novedades</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -73,13 +74,13 @@
             <ion-card-title>Historial</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>Revisa tu historial médico</p>
-          </ion-card-content>
+            <p>Revisa tu historial médico</ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+
 
 
 

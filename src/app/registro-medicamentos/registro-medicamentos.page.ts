@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem } from '@ionic/angular/standalone';
 import { ApiService } from '../services/api.service';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-medicamentos',
@@ -25,7 +26,7 @@ export class RegistroMedicamentosPage implements OnInit {
   frecuencia: number | null = null;
   fechaEntrega: string = '';
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -58,6 +59,10 @@ export class RegistroMedicamentosPage implements OnInit {
         alert('Error desconocido registrando el medicamento');
       }
     }
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([`/${page}`]);
   }
 }
 

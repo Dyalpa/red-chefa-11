@@ -5,6 +5,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
+  <div class="nav-buttons">
+    <span class="nav-link" (click)="navigateTo('medicamentos')">
+      <img src="assets/icon/izquierda.png" class="icon" alt="Atrás">
+      Atrás
+    </span>
+    <span class="nav-link nav-right" (click)="navigateTo('home')">
+      <img src="assets/icon/hogar.png" class="icon" alt="Inicio">
+      Inicio
+    </span>
+  </div>
+
+
   <ion-header collapse="condense" class="header">
     <ion-toolbar>
       <ion-title size="large">Registro de Medicamentos</ion-title>
@@ -47,6 +59,8 @@
           <ion-input [(ngModel)]="fechaEntrega" name="fechaEntrega" type="date" required class="input-margin translucent-input"></ion-input>
         </ion-item>
         <ion-button expand="full" type="submit" class="submit-button">Registrar</ion-button>
+        <ion-button class="submit-button" (click)="navigateTo('medicamentos')">Cancelar</ion-button>
+
       </form>
     </ion-card-content>
   </ion-card>

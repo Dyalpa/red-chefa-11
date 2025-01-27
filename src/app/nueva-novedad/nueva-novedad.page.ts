@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem } from '@ionic/angular/standalone';
 import { ApiService } from '../services/api.service';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nueva-novedad',
@@ -23,7 +24,7 @@ export class NuevaNovedadPage implements OnInit {
   fecha: string = ''; // Definición de propiedad para evitar errores de compilación
   hora: string = '';  // Definición de propiedad para evitar errores de compilación
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.setDefaultDateTime();
@@ -63,6 +64,10 @@ export class NuevaNovedadPage implements OnInit {
         alert('Error desconocido registrando la novedad');
       }
     }
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([`/${page}`]);
   }
 }
 
