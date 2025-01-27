@@ -1,13 +1,26 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header">
   <ion-toolbar>
-    <ion-title>consultar-cita</ion-title>
+    <ion-title>
+      Consulta de citas
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="background">
+  <div class="nav-buttons">
+    <span class="nav-link" (click)="navigateTo('citas')">
+      <img src="assets/icon/izquierda.png" class="icon" alt="Atrás">
+      Atrás
+    </span>
+    <span class="nav-link nav-right" (click)="navigateTo('home')">
+      <img src="assets/icon/hogar.png" class="icon" alt="Inicio">
+      Inicio
+    </span>
+  </div>
+
+  <ion-header collapse="condense" class="header">
     <ion-toolbar>
-      <ion-title size="large">consultar-cita</ion-title>
+      <ion-title size="large">Consulta de citas</ion-title>
     </ion-toolbar>
   </ion-header>
 </ion-content>

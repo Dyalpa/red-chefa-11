@@ -1,0 +1,78 @@
+/* Estilo para el fondo de la página */
+.background {
+    --ion-background-color: #f0f8ff; /* Azul claro */
+    font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+    padding: 16px; /* Espaciado alrededor del contenido */
+  }
+  
+  /* Estilo para la barra de inicio */
+  .header {
+    --background: #4dd0e1; /* Azul claro */
+    --ion-toolbar-background: #4dd0e1; /* Azul claro */
+    --ion-text-color: #00110f; /* Texto verde oscuro */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para barra de inicio */
+  }
+  
+  /* Estilo para las tarjetas */
+  .card {
+    background-color: #ffffff; /* Blanco para contraste */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de tarjeta */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 16px; /* Espacio entre tarjetas */
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra al pasar el ratón */
+  }
+  
+  .card ion-card-header {
+    background-color: #4dd0e1; /* Azul claro más oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar texto */
+  }
+  
+  .card ion-card-content {
+    background-color: #e0f2f1; /* Verde claro */
+    font-size: 1.1em; /* Tamaño de fuente más grande */
+    color: #00695c; /* Texto verde oscuro */
+    padding: 16px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+  }
+  
+  /* Estilos adicionales para los enlaces de navegación */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Color de fondo opcional */
+    border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+    font-family: 'Roboto', sans-serif; /* Fuente legible y moderna */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  .nav-link {
+    display: flex;
+    flex-direction: column; /* Apilar ícono encima del texto */
+    align-items: center; /* Centrar elementos verticalmente */
+    cursor: pointer;
+    color: #4dd0e1; /* Coincidir con el color azul claro */
+    text-decoration: underline; /* Subrayado permanente */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar texto */
+  }
+  
+  .nav-link .icon {
+    width: 24px; /* Ajustar tamaño según sea necesario */
+    height: 24px;
+    margin-bottom: 4px; /* Espacio entre el icono y el texto */
+  }
+  
+  .nav-right {
+    align-self: center; /* Alinear verticalmente con el nombre de usuario */
+  }
