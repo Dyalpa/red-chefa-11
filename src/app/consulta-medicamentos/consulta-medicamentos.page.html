@@ -1,8 +1,6 @@
 <ion-header [translucent]="true" class="header">
   <ion-toolbar>
-    <ion-title>
-      Consulta de medicamentos
-    </ion-title>
+    <ion-title size="large">Consulta de medicamentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,4 +21,64 @@
       <ion-title size="large">Consulta de medicamentos</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Botones de filtro -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="filter-button" expand="block" (click)="mostrarLista('nombre')">Nombre</ion-button>
+        <ion-list class="filter-list" *ngIf="filtroSeleccionado === 'nombre'">
+          <ion-item *ngFor="let nombre of nombres" (click)="seleccionarFiltro('nombre', nombre)">
+            {{ nombre }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-button class="filter-button" expand="block" (click)="mostrarLista('presentacion')">Presentación</ion-button>
+        <ion-list class="filter-list" *ngIf="filtroSeleccionado === 'presentacion'">
+          <ion-item *ngFor="let presentacion of presentaciones" (click)="seleccionarFiltro('presentacion', presentacion)">
+            {{ presentacion }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="filter-button" expand="block" (click)="mostrarLista('especialista')">Especialista</ion-button>
+        <ion-list class="filter-list" *ngIf="filtroSeleccionado === 'especialista'">
+          <ion-item *ngFor="let especialista of especialistas" (click)="seleccionarFiltro('especialista', especialista)">
+            {{ especialista }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-button class="filter-button" expand="block" (click)="mostrarLista('fecha_entrega')">Fecha de Entrega</ion-button>
+        <ion-list class="filter-list" *ngIf="filtroSeleccionado === 'fecha_entrega'">
+          <ion-item *ngFor="let fecha of fechasEntrega" (click)="seleccionarFiltro('fecha_entrega', fecha)">
+            {{ fecha }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Resultados de búsqueda -->
+  <ion-grid>
+    <ion-row *ngFor="let medicamento of medicamentos">
+      <ion-col size="12" size-md="6">
+        <ion-card class="card">
+          <ion-card-header>
+            {{ medicamento.nombre }}
+          </ion-card-header>
+          <ion-card-content>
+            Presentación: {{ medicamento.presentacion }}<br>
+            Especialista: {{ medicamento.especialista }}<br>
+            Fecha de Entrega: {{ medicamento.fecha_entrega }}<br>
+            Cantidad: {{ medicamento.cantidad }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

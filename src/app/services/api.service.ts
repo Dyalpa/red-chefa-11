@@ -85,7 +85,48 @@ export class ApiService {
     );
   }
 
-  
+  getFilteredMedicamentos(filters: any): Observable<any> {
+    const url = `${this.baseUrl}/medicamentos`;
+    console.log('Enviando filtros:', filters); // Asegúrate de que se están enviando los filtros
+    return this.http.get(url, { params: filters }).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getAllMedicamentos(): Observable<any[]> {
+    const url = `${this.baseUrl}/medicamentos`;
+    return this.http.get<any[]>(url).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getNombres(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/nombres`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getPresentaciones(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/presentaciones`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getEspecialistas(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/especialistas`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getFechasEntrega(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/fechas-entrega`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
+
+   
   //MÉTODOS DE ACTUALIZACIÓN
 
   //MÉTODOS DE ELIMINACIÓN
