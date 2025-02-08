@@ -1,0 +1,77 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>
+      Registro de Tratamientos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <div class="nav-buttons">
+    <span class="nav-link" (click)="navigateTo('medicamentos')">
+      <img src="assets/icon/izquierda.png" class="icon" alt="Atrás">
+      Atrás
+    </span>
+    <span class="nav-link nav-right" (click)="navigateTo('home')">
+      <img src="assets/icon/hogar.png" class="icon" alt="Inicio">
+      Inicio
+    </span>
+  </div>
+
+  <ion-header collapse="condense" class="header">
+    <ion-toolbar>
+      <ion-title size="large">Registro de Tratamientos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="center-title">Formulario de Tratamientos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarTratamiento()" #tratamientoForm="ngForm">
+        <ion-item class="item-hover">
+          <ion-label position="floating">Nombre del medicamento</ion-label>
+          <ion-select [(ngModel)]="medicamento_id" name="medicamento" interface="popover" required>
+            <ion-select-option *ngFor="let med of medicamentos" [value]="med.medicamento_id">
+              {{ med.nombre }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Usuario que registra</ion-label>
+          <ion-input [(ngModel)]="usuario" name="usuario" type="text" required readonly></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Dosis</ion-label>
+          <ion-input [(ngModel)]="dosis" name="dosis" type="text" required></ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Hora de administración</ion-label>
+          <ion-input
+            [(ngModel)]="horaAdministracion"
+            name="horaAdministracion"
+            type="time"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item class="item-hover">
+          <ion-label position="floating">Frecuencia</ion-label>
+          <ion-input [(ngModel)]="frecuencia" name="frecuencia" type="text" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" class="submit-button">Registrar</ion-button>
+        <ion-button expand="full" type="button" class="submit-button" (click)="navigateTo('medicamentos')">Cancelar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+
+
+

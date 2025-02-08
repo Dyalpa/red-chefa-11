@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 import { ApiService } from '../services/api.service';
 import { firstValueFrom } from 'rxjs';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro-medicamentos.page.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, FormsModule, IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonGrid, IonCol, IonRow, IonCardTitle, IonCardHeader, IonCardContent, IonButton, IonInput, IonLabel, IonItem]
+  imports: [CommonModule, FormsModule, IonicModule]
 })
 export class RegistroMedicamentosPage implements OnInit {
   @ViewChild('medicamentoForm')

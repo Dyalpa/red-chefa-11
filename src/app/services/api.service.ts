@@ -15,18 +15,8 @@ export class ApiService {
     return throwError('Ocurrió un error; por favor intente de nuevo más tarde.');
   }
 
-
-  //MÉTODOS DE INSERCIÓN
-
-  addUsuario(usuario: any): Observable<any> {
-    const url = `${this.baseUrl}/usuarios`;
-    return this.http.post(url, usuario).pipe(
-      catchError(this.handleError)
-    );
-  }
-
-   //Inicio de sesión
-   loginUsuario(correo: string, clave: string): Observable<any> {
+  //Inicio de sesión
+  loginUsuario(correo: string, clave: string): Observable<any> {
     const url = `${this.baseUrl}/login`;
     return this.http.post(url, { correo, clave }).pipe(
       catchError(this.handleError)
@@ -47,7 +37,16 @@ export class ApiService {
       );
    }
 
-    
+
+  //MÉTODOS DE INSERCIÓN
+
+  addUsuario(usuario: any): Observable<any> {
+    const url = `${this.baseUrl}/usuarios`;
+    return this.http.post(url, usuario).pipe(
+      catchError(this.handleError)
+    );
+  }
+       
   addMedicamento(medicamento: any): Observable<any> {
     const url = `${this.baseUrl}/medicamentos`;
     return this.http.post(url, medicamento).pipe(
@@ -72,6 +71,13 @@ export class ApiService {
   addNovedades(novedad: any): Observable<any> {
     const url = `${this.baseUrl}/novedades`;
     return this.http.post(url, novedad).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  addTratamientos(tratamiento: any): Observable<any> {
+    const url = `${this.baseUrl}/tratamientos`;
+    return this.http.post(url, tratamiento).pipe(
       catchError(this.handleError)
     );
   }
@@ -124,8 +130,11 @@ export class ApiService {
     );
   }
 
-
-
+  getMedicamentoId(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/medicamento_id`).pipe(
+      catchError(this.handleError)
+    );
+  }
    
   //MÉTODOS DE ACTUALIZACIÓN
 
