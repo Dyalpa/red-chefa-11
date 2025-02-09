@@ -23,4 +23,21 @@
       <ion-title size="large">Consulta de Tratamientos</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-grid>
+    <ion-row *ngFor="let tratamiento of tratamientos">
+      <ion-col size="12" size-md="6">
+        <ion-card class="card">
+          <ion-card-header>
+            {{ tratamiento.medicamento }}
+          </ion-card-header>
+          <ion-card-content>
+            Dosis: {{ tratamiento.dosis }}<br>
+            Hora: {{ tratamiento.hora_administracion }}<br>
+            Frecuencia: {{ tratamiento.frecuencia }}<br>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

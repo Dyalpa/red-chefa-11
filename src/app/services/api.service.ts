@@ -135,6 +135,12 @@ export class ApiService {
       catchError(this.handleError)
     );
   }
+
+  getTratamientos(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/tratamientos`).pipe(
+      catchError(this.handleError)
+    );
+  }
    
   //MÉTODOS DE ACTUALIZACIÓN
 
